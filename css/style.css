@@ -25,6 +25,7 @@ body{
   width: 15px;
 }
 /* Track */
+
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 8px var(--main-color);
   border-radius: 1px;
@@ -439,8 +440,6 @@ position: relative;
   -webkit-animation: buncing 2s infinite;
 }
 
-/* start lending */
-
 /*end lending */
 /* start articlea */
 .articles{
@@ -452,11 +451,6 @@ position: relative;
   display: grid;
   grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
   gap: 40px;
-}
-@media (max-width: 1199px ){
-  .articles .container{
-    grid-template-columns: repeat(3, auto);
-  }
 }
 .articles .container .box {
   background-color: white;
@@ -1111,6 +1105,7 @@ position: relative;
   justify-content: center;
   margin: 20px auto;
   align-items: center;
+
 }
 .events .container .unit{
   border: 1px solid #d3d3d3;
@@ -1123,6 +1118,8 @@ position: relative;
   -ms-transition: var(--main-taransition);
   -o-transition: var(--main-taransition);
 }
+.events .container .unit .days{
+}
 .events .container .unit:hover{
   border-color: var(--main-color);
 }
@@ -1133,6 +1130,7 @@ position: relative;
   -moz-transition: var(--main-taransition);
   -ms-transition: var(--main-taransition);
   -o-transition: var(--main-taransition);
+
 }
 .events .container .info span:last-child{
     border-top: 1px solid #d3d3d3;
@@ -1147,6 +1145,9 @@ position: relative;
   color: var(--main-color);
   font-weight: bold;
   padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .events .container .title{
     text-align: center;
@@ -1541,6 +1542,8 @@ background-color: rgba(255, 255, 255, 0.90);
   display: flex;
   flex-wrap: wrap;
   min-height: 100vh;
+  padding-top: var(--main-padding-section-top);
+  padding-bottom: var(--main-padding-section-top);
 }
 .discount .image{
   background-image: url(../images/discount-background1.jpg);
@@ -1554,6 +1557,9 @@ background-color: rgba(255, 255, 255, 0.90);
   z-index: 1;
   animation: change-background 10s linear infinite;
   -webkit-animation: change-background 10s linear infinite;
+}
+.discount .image img{
+  width: 100%;
 }
 @media(max-width:991px){
   .discount .image{
