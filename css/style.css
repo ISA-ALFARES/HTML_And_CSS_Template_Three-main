@@ -1000,11 +1000,11 @@ position: relative;
   background-color: var(--main-color);
   left: 0;
   top: 0;
-  transition: var(--main-taransition);
-  -webkit-transition: var(--main-taransition);
-  -moz-transition: var(--main-taransition);
-  -ms-transition: var(--main-taransition);
-  -o-transition: var(--main-taransition);
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
 }
 /* end our skills  */
 /* start work steps */

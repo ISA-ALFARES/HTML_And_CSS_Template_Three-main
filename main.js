@@ -1,3 +1,41 @@
+const nums = document.querySelectorAll(".stats .number");
+const statsSection = document.querySelector(".stats");
+let started = false;
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY >= statsSection.offsetTop) {
+    if (!started) {
+      nums.forEach((num) => startCount(num));
+      started = true;
+    }
+  }
+});
+
+function startCount(el) {
+  const goal = parseInt(el.dataset.goal);
+
+  if (isNaN(goal)) {
+    console.error(`Error: Invalid goal value for element ${el}`);
+    return;
+  }
+
+  let count = setInterval(() => {
+    el.textContent++;
+    if (el.textContent == goal) {
+      clearInterval(count);
+    }
+  }, 2000 / goal);
+}
+
+
+
+
+
+
+
+
+
+
 let countDownDate = new Date("Dec 31 , 2024 23:59:59").getTime();
 
 let counter = setInterval(() => {
@@ -25,4 +63,14 @@ let counter = setInterval(() => {
 
 } , 1000)
 
+let section = document.querySelector(".our-skills");
+let spans = document.querySelectorAll(".the-progress span");
+
+window.onscroll = function () {
+  if (window.scrollY >= section.offsetTop - 300){
+    spans.forEach((span) => {
+      span.style.width = span.dataset.width ;
+    });
+  }
+};
 
